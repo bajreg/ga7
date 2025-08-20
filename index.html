@@ -1,0 +1,76 @@
+<!doctype html>
+<p>Net Present Value (NPV):</p>
+<p>\[ \mathrm{NPV} = \sum_{t=1}^{T} \frac{C_t}{(1+r)^t} - C_0 \]</p>
+<p>Cost of Equity (CAPM):</p>
+<p>\[ k_e = r_f + \beta (r_m - r_f) \]</p>
+<p>Effective Annual Rate (EAR):</p>
+<p>\[ \mathrm{EAR} = \left(1 + \frac{i}{n}\right)^n - 1 \]</p>
+<aside class="notes">
+Define each symbol: r is discount rate, C_t cash flow at time t, C_0 initial investment. For CAPM, confirm beta window and market proxy.
+</aside>
+</section>
+
+
+<!-- Guidance & Risks with fragments -->
+<section>
+<h2>Outlook & Guidance</h2>
+<ul>
+<li class="fragment">Full-year revenue growth: <em>Replace with guidance%</em></li>
+<li class="fragment">Operating leverage target: <em>Replace with %</em></li>
+<li class="fragment">Credit cost normalization: <em>Describe assumptions</em></li>
+<li class="fragment">Capital return: <em>Dividend/buyback plan</em></li>
+</ul>
+<aside class="notes">
+Tie guidance to macro assumptions (rate path, credit quality, liquidity). Call out risk scenarios and mitigations.
+</aside>
+</section>
+
+
+<!-- Thank you / Contact -->
+<section>
+<h2>Thank You</h2>
+<p>Questions & discussion</p>
+<p class="email">Email: <strong>23f1001877@ds.study.iitm.ac.in</strong></p>
+<aside class="notes">
+Invite Q&amp;A. Remind that a public link will be available via GitHub Pages following this session.
+</aside>
+</section>
+
+
+</div>
+</div>
+
+
+<!-- Reveal.js and plugins -->
+<script src="https://unpkg.com/reveal.js@5/dist/reveal.js"></script>
+<script src="https://unpkg.com/reveal.js@5/plugin/markdown/markdown.js"></script>
+<script src="https://unpkg.com/reveal.js@5/plugin/notes/notes.js"></script>
+<script src="https://unpkg.com/reveal.js@5/plugin/highlight/highlight.js"></script>
+<!-- Math (MathJax v3) -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/reveal.js@5/plugin/math/math.js"></script>
+
+
+<script>
+// Initialize Reveal with desired options and plugins
+Reveal.initialize({
+hash: true,
+slideNumber: true,
+controls: true,
+progress: true,
+center: false,
+transition: 'slide', // none/fade/slide/convex/concave/zoom
+plugins: [ RevealMarkdown, RevealNotes, RevealHighlight, RevealMath.MathJax3 ],
+// Math options (optional: defaults are fine)
+mathjax3: {
+tex: {
+inlineMath: [['$', '$'], ['\\(', '\\)']]
+}
+}
+});
+</script>
+
+
+<div class="footer">Press <kbd>S</kbd> for speaker notes · Built with RevealJS</div>
+</body>
+</html>
