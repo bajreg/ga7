@@ -1,76 +1,202 @@
 <!doctype html>
-<p>Net Present Value (NPV):</p>
-<p>\[ \mathrm{NPV} = \sum_{t=1}^{T} \frac{C_t}{(1+r)^t} - C_0 \]</p>
-<p>Cost of Equity (CAPM):</p>
-<p>\[ k_e = r_f + \beta (r_m - r_f) \]</p>
-<p>Effective Annual Rate (EAR):</p>
-<p>\[ \mathrm{EAR} = \left(1 + \frac{i}{n}\right)^n - 1 \]</p>
-<aside class="notes">
-Define each symbol: r is discount rate, C_t cash flow at time t, C_0 initial investment. For CAPM, confirm beta window and market proxy.
-</aside>
-</section>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Quarterly Earnings – Interactive RevealJS Deck</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="description" content="Interactive quarterly earnings presentation using RevealJS" />
 
+  <!-- Reveal.js core & themes (via CDN) -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/reveal.css" />
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/theme/black.css" id="theme" />
 
-<!-- Guidance & Risks with fragments -->
-<section>
-<h2>Outlook & Guidance</h2>
-<ul>
-<li class="fragment">Full-year revenue growth: <em>Replace with guidance%</em></li>
-<li class="fragment">Operating leverage target: <em>Replace with %</em></li>
-<li class="fragment">Credit cost normalization: <em>Describe assumptions</em></li>
-<li class="fragment">Capital return: <em>Dividend/buyback plan</em></li>
-</ul>
-<aside class="notes">
-Tie guidance to macro assumptions (rate path, credit quality, liquidity). Call out risk scenarios and mitigations.
-</aside>
-</section>
+  <!-- Code highlighting (Highlight.js) -->
+  <link rel="stylesheet" href="https://unpkg.com/highlight.js@11.9.0/styles/github.min.css" />
 
+  <style>
+    /* Subtle polish */
+    .reveal .slides { text-align: left; }
+    .reveal h1, .reveal h2, .reveal h3 { text-align: left; }
+    .reveal .byline { font-size: 0.8rem; opacity: .8; }
+    .reveal .email { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+    .reveal .kpi { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; }
+    .reveal .kpi .card { border-radius: 1rem; padding: 1rem; box-shadow: 0 8px 24px rgba(0,0,0,.25); }
+    .reveal .callout { border-left: 6px solid #888; padding: .75rem 1rem; background: rgba(255,255,255,.05); border-radius: .5rem; }
+    .reveal .footer { position: fixed; bottom: 12px; left: 24px; font-size: .65rem; opacity: .7; }
+    .reveal .brand { letter-spacing: .04em; font-weight: 700; }
+    .reveal .two-col { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem; align-items: start; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
 
-<!-- Thank you / Contact -->
-<section>
-<h2>Thank You</h2>
-<p>Questions & discussion</p>
-<p class="email">Email: <strong>23f1001877@ds.study.iitm.ac.in</strong></p>
-<aside class="notes">
-Invite Q&amp;A. Remind that a public link will be available via GitHub Pages following this session.
-</aside>
-</section>
+      <!-- Title -->
+      <section>
+        <h1>Quarterly Earnings Report</h1>
+        <h3 class="brand">Modern Interactive Deck (RevealJS)</h3>
+        <p class="byline">Prepared by Technical Consultant</p>
+        <p class="email">Contact: <strong>23f1001877@ds.study.iitm.ac.in</strong></p>
+        <aside class="notes">
+          Welcome the audience, mention the goal: to review the quarter's performance, share drivers behind the numbers, and outline guidance.
+          Explain that this deck is interactive: keyboard arrows to navigate, <kbd>S</kbd> for speaker view, <kbd>F</kbd> to go fullscreen.
+        </aside>
+      </section>
 
+      <!-- Agenda with fragments (animated elements) -->
+      <section>
+        <h2>Agenda</h2>
+        <ul>
+          <li class="fragment">Headline KPIs</li>
+          <li class="fragment">Revenue & Segment Analysis</li>
+          <li class="fragment">Key Drivers & Risks</li>
+          <li class="fragment">Outlook & Guidance</li>
+          <li class="fragment">Q&amp;A</li>
+        </ul>
+        <aside class="notes">
+          Step through each bullet with fragments. Pause on drivers & risks to solicit questions.
+        </aside>
+      </section>
 
-</div>
-</div>
+      <!-- KPI grid with fragments -->
+      <section>
+        <h2>Headline KPIs (Q−o−Q)</h2>
+        <div class="kpi">
+          <div class="card fragment" data-fragment-index="1">
+            <h3>Revenue</h3>
+            <p><strong>$3.48B</strong> <small>(+7.2%)</small></p>
+          </div>
+          <div class="card fragment" data-fragment-index="2">
+            <h3>Net Income</h3>
+            <p><strong>$612M</strong> <small>(+5.1%)</small></p>
+          </div>
+          <div class="card fragment" data-fragment-index="3">
+            <h3>EPS (Diluted)</h3>
+            <p><strong>$1.42</strong> <small>(+4.4%)</small></p>
+          </div>
+        </div>
+        <p class="callout fragment" data-fragment-index="4">All figures are illustrative placeholders; replace with actuals before publishing.</p>
+        <aside class="notes">
+          Emphasize top-line acceleration and disciplined expense management. Mention that numbers here are placeholders pending finance sign-off.
+        </aside>
+      </section>
 
+      <!-- A slide written in Markdown -->
+      <section data-markdown>
+        <textarea data-template>
+## Segment Breakdown (Markdown Slide)
 
-<!-- Reveal.js and plugins -->
-<script src="https://unpkg.com/reveal.js@5/dist/reveal.js"></script>
-<script src="https://unpkg.com/reveal.js@5/plugin/markdown/markdown.js"></script>
-<script src="https://unpkg.com/reveal.js@5/plugin/notes/notes.js"></script>
-<script src="https://unpkg.com/reveal.js@5/plugin/highlight/highlight.js"></script>
-<!-- Math (MathJax v3) -->
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="https://unpkg.com/reveal.js@5/plugin/math/math.js"></script>
+- **Retail Banking:** +6.8% YoY revenue
+- **Corporate & Investment Banking:** +8.2% YoY revenue
+- **Wealth Management:** +4.0% YoY revenue
 
+> Drivers: deposit growth, NIM stabilization, and fee recovery.
 
-<script>
-// Initialize Reveal with desired options and plugins
-Reveal.initialize({
-hash: true,
-slideNumber: true,
-controls: true,
-progress: true,
-center: false,
-transition: 'slide', // none/fade/slide/convex/concave/zoom
-plugins: [ RevealMarkdown, RevealNotes, RevealHighlight, RevealMath.MathJax3 ],
-// Math options (optional: defaults are fine)
-mathjax3: {
-tex: {
-inlineMath: [['$', '$'], ['\\(', '\\)']]
-}
-}
-});
-</script>
+**Action:** Replace with validated figures and add commentary per segment owner.
+        </textarea>
+        <aside class="notes">
+          Point out this slide demonstrates native Markdown support. Invite segment leads to provide final bullet updates.
+        </aside>
+      </section>
 
+      <!-- Code sample with syntax highlighting -->
+      <section>
+        <h2>Reproducible Metric Calc (Code)</h2>
+        <div class="two-col">
+          <div>
+            <pre><code class="language-python"># Rolling Net Interest Margin (NIM)
+import pandas as pd
 
-<div class="footer">Press <kbd>S</kbd> for speaker notes · Built with RevealJS</div>
+# df columns: ['date','interest_income','interest_expense','earning_assets']
+df['nim'] = (df['interest_income'] - df['interest_expense']) / df['earning_assets']
+# 4-quarter rolling average
+nim_rolling = df.set_index('date')['nim'].rolling(window=4).mean()
+print(nim_rolling.tail())</code></pre>
+          </div>
+          <div>
+            <p class="callout">This code snippet illustrates transparency and reproducibility.
+              Paste in the team’s validated dataset to regenerate figures displayed in the report.</p>
+            <ul>
+              <li class="fragment">Syntax highlighting via <em>highlight.js</em></li>
+              <li class="fragment">Supports dozens of languages</li>
+              <li class="fragment">Great for data lineage & auditability</li>
+            </ul>
+          </div>
+        </div>
+        <aside class="notes">
+          Briefly explain where the data originates, how it is validated, and how to rerun this calculation if assumptions change.
+        </aside>
+      </section>
+
+      <!-- Mathematics (financial formulas) -->
+      <section>
+        <h2>Finance Math</h2>
+        <p>Net Present Value (NPV):</p>
+        <p>\[ \mathrm{NPV} = \sum_{t=1}^{T} \frac{C_t}{(1+r)^t} - C_0 \]</p>
+        <p>Cost of Equity (CAPM):</p>
+        <p>\[ k_e = r_f + \beta (r_m - r_f) \]</p>
+        <p>Effective Annual Rate (EAR):</p>
+        <p>\[ \mathrm{EAR} = \left(1 + \frac{i}{n}\right)^n - 1 \]</p>
+        <aside class="notes">
+          Define each symbol: r is discount rate, C_t cash flow at time t, C_0 initial investment. For CAPM, confirm beta window and market proxy.
+        </aside>
+      </section>
+
+      <!-- Guidance & Risks with fragments -->
+      <section>
+        <h2>Outlook & Guidance</h2>
+        <ul>
+          <li class="fragment">Full-year revenue growth: <em>Replace with guidance%</em></li>
+          <li class="fragment">Operating leverage target: <em>Replace with %</em></li>
+          <li class="fragment">Credit cost normalization: <em>Describe assumptions</em></li>
+          <li class="fragment">Capital return: <em>Dividend/buyback plan</em></li>
+        </ul>
+        <aside class="notes">
+          Tie guidance to macro assumptions (rate path, credit quality, liquidity). Call out risk scenarios and mitigations.
+        </aside>
+      </section>
+
+      <!-- Thank you / Contact -->
+      <section>
+        <h2>Thank You</h2>
+        <p>Questions & discussion</p>
+        <p class="email">Email: <strong>23f1001877@ds.study.iitm.ac.in</strong></p>
+        <aside class="notes">
+          Invite Q&amp;A. Remind that a public link will be available via GitHub Pages following this session.
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js and plugins -->
+  <script src="https://unpkg.com/reveal.js@5/dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js@5/plugin/markdown/markdown.js"></script>
+  <script src="https://unpkg.com/reveal.js@5/plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@5/plugin/highlight/highlight.js"></script>
+  <!-- Math (MathJax v3) -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://unpkg.com/reveal.js@5/plugin/math/math.js"></script>
+
+  <script>
+    // Initialize Reveal with desired options and plugins
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      controls: true,
+      progress: true,
+      center: false,
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+      plugins: [ RevealMarkdown, RevealNotes, RevealHighlight, RevealMath.MathJax3 ],
+      // Math options (optional: defaults are fine)
+      mathjax3: {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      }
+    });
+  </script>
+
+  <div class="footer">Contact: 23f1001877@ds.study.iitm.ac.in · Press <kbd>S</kbd> for speaker notes · Built with RevealJS</div>
 </body>
 </html>
