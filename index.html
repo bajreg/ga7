@@ -3,24 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <title>Quarterly Earnings – Interactive RevealJS Deck</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <meta name="description" content="Interactive quarterly earnings presentation using RevealJS" />
-  <!-- Email meta tag for validation -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="23f1001877@ds.study.iitm.ac.in" />
 
   <!-- Reveal.js core & themes -->
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/reveal.css" />
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/theme/black.css" id="theme" />
 
-  <!-- Code highlighting -->
+  <!-- Highlight.js -->
   <link rel="stylesheet" href="https://unpkg.com/highlight.js@11.9.0/styles/github.min.css" />
-
-  <style>
-    .reveal .slides { text-align: left; }
-    .reveal h1, .reveal h2, .reveal h3 { text-align: left; }
-    .reveal .email { font-family: monospace; }
-    .footer { position: fixed; bottom: 12px; left: 24px; font-size: .65rem; opacity: .7; }
-  </style>
 </head>
 <body>
   <div class="reveal">
@@ -28,19 +19,20 @@
 
       <!-- Title -->
       <section>
-        <h1>Quarterly Earnings Report email:  23f1001877@ds.study.iitm.ac.in</h1>
-        <h3>Interactive RevealJS Deck</h3>
-        <p class="email">Contact: <strong>23f1001877@ds.study.iitm.ac.in</strong></p>
+        <h1>Quarterly Earnings Report</h1>
+        <p>Email: <strong>23f1001877@ds.study.iitm.ac.in</strong></p>
+        <aside class="notes">
+          Welcome the audience and introduce yourself. Explain this is an interactive deck built with RevealJS.
+        </aside>
       </section>
 
       <!-- Agenda -->
       <section>
         <h2>Agenda</h2>
         <ul>
-          <li class="fragment">Headline KPIs</li>
-          <li class="fragment">Revenue & Analysis</li>
-          <li class="fragment">Outlook & Risks</li>
-          <li class="fragment">Q&amp;A</li>
+          <li class="fragment">KPIs</li>
+          <li class="fragment">Analysis</li>
+          <li class="fragment">Outlook</li>
         </ul>
       </section>
 
@@ -50,7 +42,7 @@
 ## Segment Breakdown (Markdown)
 - Retail Banking: +6.8% YoY
 - Corporate Banking: +8.2% YoY
-- Wealth Management: +4.0% YoY
+- Wealth: +4.0% YoY
         </textarea>
       </section>
 
@@ -63,30 +55,22 @@ df['nim'] = (df['interest_income'] - df['interest_expense']) / df['earning_asset
         </code></pre>
       </section>
 
-      <!-- Math Formulas -->
+      <!-- Math -->
       <section>
         <h2>Finance Math</h2>
-        <p>NPV Formula:</p>
         <p>\\[ NPV = \\sum_{t=1}^{T} \\frac{C_t}{(1+r)^t} - C_0 \\]</p>
       </section>
 
-      <!-- Contact Slide (explicit) -->
+      <!-- Contact -->
       <section>
         <h2>Contact</h2>
-        <p>Email: <strong>23f1001877@ds.study.iitm.ac.in</strong></p>
-      </section>
-
-      <!-- Thank You -->
-      <section>
-        <h2>Thank You</h2>
-        <p>Questions?</p>
         <p>Email: <strong>23f1001877@ds.study.iitm.ac.in</strong></p>
       </section>
 
     </div>
   </div>
 
-  <!-- Reveal.js and plugins -->
+  <!-- Reveal.js scripts -->
   <script src="https://unpkg.com/reveal.js@5/dist/reveal.js"></script>
   <script src="https://unpkg.com/reveal.js@5/plugin/markdown/markdown.js"></script>
   <script src="https://unpkg.com/reveal.js@5/plugin/notes/notes.js"></script>
@@ -97,7 +81,6 @@ df['nim'] = (df['interest_income'] - df['interest_expense']) / df['earning_asset
   <script>
     Reveal.initialize({
       hash: true,
-      slideNumber: true,
       plugins: [ RevealMarkdown, RevealNotes, RevealHighlight, RevealMath.MathJax3 ]
     });
   </script>
